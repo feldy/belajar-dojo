@@ -1,0 +1,16 @@
+{
+	identifier: "userName",
+	items: [{
+		"userName":"Jim Kelly",
+		"address":"Jakarta"
+	}, {
+		"userName":"Thurman Thomas",
+		"address":"Pemalang"
+	}, {
+		"userName":"Steve Tasker",
+		"address":"Malang"
+	}, {
+		"userName":"Bruce Smith",
+		"address":"Solo"
+	}]
+}

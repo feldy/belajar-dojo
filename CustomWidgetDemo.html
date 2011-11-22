@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Demo Dojo Custom Widget</title>
+        <script>
+            var dojoConfig = {
+                isDebug: true,
+                parseOnLoad: false,
+                modulePaths: {
+                    custom: '../../custom'
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="custom/AuthorWidget/css/AuthorWidget.css" media="screen">
+        <script src="lib/dojo/dojo.js"></script>
+    </head>
+    <body>
+        <h1>Demo Custom Widget</h1>
+        <div id="authorContainer"></div>
+        <script>
+            // bring in our CustomWidget
+            dojo.require('custom.AuthorWidget');
+            
+            dojo.ready(function() {
+                var def = dojo.xhrGet({
+                    url: 'user.json',
+                    handleAs: 'json'
+                });
+                
+                // Once ready, process the author
+                def.then(function(authors) {
+                    // Get reference to our container
+                    var authorContainer = dojo.byId('authorContainer');
+                    
+                    dojo.forEach(authors, function(author) {
+                        // create our widget and place it
+                        var widget = new custom.AuthorWidget(author).placeAt(authorContainer);
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

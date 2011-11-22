@@ -1,0 +1,35 @@
+
+<table>
+	
+    <tr>
+        <td>Segment Name</td>
+        <td>
+           
+			<select dojoType="dijit.form.FilteringSelect" data-dojo-attach-point="segmentNameNode" id="${idSegmentName}" autocomplete="true" value="${segmentName}">
+			<option value="Panjang">Panjang-PJ</option>
+			<option value="Tinggi" >Tinggi-TG</option>
+			<option value="Lebar" >Lebar-LB</option>
+			<option value="Diameter" >Diameter-DM</option>
+			<option;value="Merk" >Merk-00</option>
+			<option value="Berat" >Berat-BR</option>
+			<option value="Tebal-Tipis" >Tebal-Tipis-TB</option>
+			<option value="Corak" >Corak-00</option>
+			<option value="Warna" >Warna-00</option>
+			<option value="Lain-Lain" >Lain-Lain-00	</option>
+			</select>
+        </td>
+       <td>*ket:</td>
+		
+    </tr>
+    <tr>
+		<td>Kode </td>
+		<td><input dojoType="dijit.form.NumberTextBox" dojoAttachPoint="KodeNode" id="${idKode}" value="${Kode}" required="true"></td>
+	</tr>
+	<tr>
+	<td>Keterangan </td>
+	<td><textarea dojoType="dijit.form.Textarea" dojoAttachPoint="KetNode" id="${idKet}" value="${Ket}" style="width:200px;"></textarea></td>
+	</tr>
+	<tr>
+	<td colspan="2"><button>Save</button> <button>Exit</button></td>
+	</tr>
+</table>

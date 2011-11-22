@@ -1,0 +1,76 @@
+dojo.provide('app.views.master.grid.TablePegawai');
+
+//dojo.require('dojox.grid.EnhancedGrid');
+dojo.require('dojox.grid.DataGrid');
+dojo.require('dojox.grid.enhanced.plugins.NestedSorting');
+dojo.require('dojo.data.ItemFileWriteStore');
+dojo.require('dojo.data.ItemFileReadStore');
+
+dojo.declare('app.views.master.grid.TablePegawai', null, {
+	tablePegawai: null,
+	
+	constructor: function() {
+		this.initTable();
+	},
+	
+	initTable: function() {
+		// initialize table layout
+		var layout = [{
+			field: 'id',
+			name: 'Employee ID'
+		}, {
+			field: 'userName',
+			name: 'Employee Name'
+		}];
+		
+		//var theGreatestTeamOfAllTime = [{
+			//items: [{
+				//"id":"12",
+				//"userName":"Jim Kelly"
+			//}, {
+				//"id":"34",
+				//"userName":"Thurman Thomas"
+			//}, {
+				//"id":"89",
+				//"userName":"Steve Tasker"
+			//}, {
+				//"id":"78",
+				//"userName":"Bruce Smith"
+			//}],
+			//identifier: "id"
+		//}];
+
+		var storePegawai = new dojo.data.ItemFileReadStore({
+			url: 'dummy-data/pegawai.json'
+			//data: { theGreatestTeamOfAllTime }
+		});
+		
+		// create the grid
+		this.tablePegawai = new dojox.grid.DataGrid({
+			query : {id: '*'},
+			id: 'tblPegawai',
+			autoWidth: true,
+			store: storePegawai,
+			//store: new dojo.data.ItemFileWriteStore({
+			//url: 'dummy-data/pegawai.json'
+			
+			//}}),
+			
+			loadingMessage: 'Loading data ...',
+			selectionMode: 'single',
+			structure: layout,
+			plugins: {
+				nestedSorting: true
+			}
+		});
+		this.tablePegawai.startup();
+	},
+	
+	getTablePegawai: function() {
+		//if (this.tablePegawai == null) {
+			//this.initTable();
+		//}
+		
+		return this.tablePegawai;
+	}
+});

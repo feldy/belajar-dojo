@@ -1,0 +1,20 @@
+{
+	identifier: "userName",
+	items: [{
+		"userName":"Panjang-PJ",
+		"address":"301",
+		"ket":"Untuk def PJ Besi Beton 1"
+	}, {
+		"userName":"Berat-BR",
+		"address":"302",
+		"ket":"Untuk def PJ Besi Beton 2"
+	}, {
+		"userName":"Lebar-LB",
+		"address":"102",
+		"ket":"Untuk def PJ Besi Beton 3"
+	}, {
+		"userName":"Tinggi-TG",
+		"address":"304",
+		"ket":"Untuk def PJ Besi Beton 4"
+	}]
+}

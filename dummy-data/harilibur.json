@@ -1,0 +1,16 @@
+{
+	identifier: "nmHari",
+	items: [{
+		"nmHari":"Jim Kelly",
+		"tgl":"Jakarta"
+	}, {
+		"nmHari":"Thurman Thomas",
+		"tgl":"Pemalang"
+	}, {
+		"nmHari":"Steve Tasker",
+		"tgl":"Malang"
+	}, {
+		"nmHari":"Bruce Smith",
+		"tgl":"Solo"
+	}]
+}
